@@ -18,6 +18,6 @@ public class GuiBackpackT2 extends GuiBackpack {
 		super(Constants.TEXTURE_PATH_GUI + "/backpackT2.png", container);
 
 		xSize = 176;
-		ySize = 192;
+		ySize = 227;
 	}
 }

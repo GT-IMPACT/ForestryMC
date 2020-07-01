@@ -20,8 +20,8 @@ import forestry.storage.inventory.ItemInventoryBackpack;
 public class ContainerBackpack extends ContainerItemInventory<ItemInventoryBackpack> {
 
 	public enum Size {
-		DEFAULT(3, 5, 44, 19),
-		T2(5, 9, 8, 8);
+		DEFAULT(5, 9, 8, 8),
+		T2(7, 9, 8, 8);
 
 		final int rows;
 		final int columns;

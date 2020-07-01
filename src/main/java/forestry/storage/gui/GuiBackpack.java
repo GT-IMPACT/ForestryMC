@@ -19,9 +19,13 @@ public class GuiBackpack extends GuiForestry<ContainerBackpack, IInventory> {
 
 	public GuiBackpack(ContainerBackpack container) {
 		this(Constants.TEXTURE_PATH_GUI + "/backpack.png", container);
+
+		xSize = 176;
+		ySize = 192;
 	}
 
 	protected GuiBackpack(String texture, ContainerBackpack container) {
 		super(texture, container, null);
 	}
+
 }
