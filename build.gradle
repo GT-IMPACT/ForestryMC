@@ -229,6 +229,7 @@ artifacts {
 	archives apiJar
 	archives devJar
 	archives sourceJar
+	archives mainJar
 }
 
 uploadArchives {
@@ -245,6 +246,9 @@ uploadArchives {
 				}
 				addFilter('source') { artifact, file ->
 					file == sourceJar.archivePath
+				}
+				addFilter('main') { artifact, file ->
+					file == mainJar.archivePath
 				}
 			}
 		} else {
