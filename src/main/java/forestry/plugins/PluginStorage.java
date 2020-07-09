@@ -505,61 +505,18 @@ public class PluginStorage extends ForestryPlugin {
 	protected void registerRecipes() {
 		BlockRegistryApiculture beeBlocks = PluginApiculture.blocks;
 		if (items.apiaristBackpack != null && beeBlocks != null) {
-			addBackpackRecipe(items.apiaristBackpack, "stickWood", beeBlocks.apicultureChest);
 		}
 
 		BlockRegistryLepidopterology butterflyBlocks = PluginLepidopterology.blocks;
 		if (items.lepidopteristBackpack != null && butterflyBlocks != null) {
 			ItemStack chest = butterflyBlocks.lepidopterology.get(BlockLepidopterologyType.LEPICHEST);
-			addBackpackRecipe(items.lepidopteristBackpack, "stickWood", chest);
 		}
-
-		addBackpackRecipe(items.minerBackpack, "ingotIron");
-		addBackpackRecipe(items.diggerBackpack, "stone");
-		addBackpackRecipe(items.foresterBackpack, "logWood");
-		addBackpackRecipe(items.hunterBackpack, Items.feather);
-		addBackpackRecipe(items.adventurerBackpack, Items.bone);
-		addBackpackRecipe(items.builderBackpack, Items.clay_ball);
 
 		// / CARPENTER
 		if (PluginManager.Module.FACTORY.isEnabled()) {
 			// / CRATES
 			RecipeManagers.carpenterManager.addRecipe(20, Fluids.WATER.getFluid(1000), null, items.crate.getItemStack(24),
 					" # ", "# #", " # ", '#', "logWood");
-
-			// / BACKPACKS T2
-			addT2BackpackRecipe(items.minerBackpack, items.minerBackpackT2);
-			addT2BackpackRecipe(items.diggerBackpack, items.diggerBackpackT2);
-			addT2BackpackRecipe(items.foresterBackpack, items.foresterBackpackT2);
-			addT2BackpackRecipe(items.hunterBackpack, items.hunterBackpackT2);
-			addT2BackpackRecipe(items.adventurerBackpack, items.adventurerBackpackT2);
-			addT2BackpackRecipe(items.builderBackpack, items.builderBackpackT2);
 		}
-	}
-
-	private static void addBackpackRecipe(Item backpack, Object material) {
-		addBackpackRecipe(backpack, material, "chestWood");
-	}
-
-	private static void addBackpackRecipe(Item backpack, Object material, Object chest) {
-		RecipeUtil.addRecipe(backpack,
-				"X#X",
-				"VYV",
-				"X#X",
-				'#', Blocks.wool,
-				'X', Items.string,
-				'V', material,
-				'Y', chest);
-	}
-
-	private static void addT2BackpackRecipe(Item backpackT1, Item backpackT2) {
-		ItemStack wovenSilk = PluginCore.items.craftingMaterial.getWovenSilk();
-		RecipeManagers.carpenterManager.addRecipe(200, Fluids.WATER.getFluid(1000), null, new ItemStack(backpackT2),
-				"WXW",
-				"WTW",
-				"WWW",
-				'X', "gemDiamond",
-				'W', wovenSilk,
-				'T', backpackT1);
 	}
 }
