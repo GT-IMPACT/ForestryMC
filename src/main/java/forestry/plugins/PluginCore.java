@@ -241,9 +241,9 @@ public class PluginCore extends ForestryPlugin {
 		if (ForestryAPI.activeMode.getStackSetting("recipe.output.compost.ash").stackSize > 0) {
 			RecipeUtil.addRecipe(ForestryAPI.activeMode.getStackSetting("recipe.output.compost.ash"), " X ", "X#X", " X ", '#', Blocks.dirt, 'X', "dustAsh");
 		}
-		if (ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.apatite").stackSize > 0) {
-			RecipeUtil.addRecipe(ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.apatite"), " # ", " X ", " # ", '#', "sand", 'X', "gemApatite");
-		}
+//		if (ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.apatite").stackSize > 0) {
+//			RecipeUtil.addRecipe(ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.apatite"), " # ", " X ", " # ", '#', "sand", 'X', "gemApatite");
+//		}
 		if (ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.ash").stackSize > 0) {
 			RecipeUtil.addRecipe(ForestryAPI.activeMode.getStackSetting("recipe.output.fertilizer.ash"), "###", "#X#", "###", '#', "dustAsh", 'X', "gemApatite");
 		}
