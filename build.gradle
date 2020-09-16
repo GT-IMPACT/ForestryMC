@@ -21,12 +21,12 @@ apply plugin: 'forge'
 apply plugin: 'maven'
 apply plugin: 'java'
 
-version = version_major + '.' + version_minor + '.' + version_patch + '.' + getBuildNumber()
+version = version_major + '.' + version_minor + '.' + version_patch + '-impact'
 if (project.hasProperty('buildQualifier')) {
 	version = project.version + '-' + project.buildQualifier
 }
 group= "net.sengir.forestry" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "forestry_" + mcversion
+archivesBaseName = "forestry"
 
 ext.dirDest = './build/dist'
 ext.dirLang = "./lang"
