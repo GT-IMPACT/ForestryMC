@@ -239,7 +239,9 @@ public class PluginStorage extends ForestryPlugin {
 		final List<String> diggerOreDictNames = new ArrayList<>(Arrays.asList(
 				"cobblestone",
 				"stone",
-				"sand"
+				"sand",
+				"rockSpace"
+
 		));
 		final List<String> foresterOreDictNames = new ArrayList<>(Arrays.asList(
 				"logWood",
